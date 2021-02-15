@@ -6,10 +6,10 @@ A small script written for POSIX-compatible shells. *(Tested with Bash and Dash)
 
 This tool allows you to manage Intel's Turbo Boost technology - enable/disable it, if there's no such option in your BIOS or UEFI, or show its current status. It may be handy if you play video games on Linux and experience freezes and/or stuttering, which most of the time is true for laptops.
 
-- [Usage](##Usage)
-- [Example usage on the command line](##Example)
-- [Tips](##Tips)
-- [License](##License)
+- [Usage](#usage)
+- [Example usage on the command line](#example)
+- [Tips](#tips)
+- [License](#license)
 
 ## Usage
 There are four possible flags you can pass to the *manage_turbo_boost.sh* script:
