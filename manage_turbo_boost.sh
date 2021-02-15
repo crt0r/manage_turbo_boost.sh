@@ -20,13 +20,14 @@ HE="--help"
 ACTIVE="0"
 INACTIVE="1"
 MSG="Turbo Boost is"
+NO_TURBO_FILE="/sys/devices/system/cpu/intel_pstate/no_turbo"
 
 write_to_no_turbo() {
-	echo "$1" | tee /sys/devices/system/cpu/intel_pstate/no_turbo 1> /dev/null
+	echo "$1" | tee "$NO_TURBO_FILE" 1> /dev/null
 }
 
 turbo_boost_status() {
-	TB_CURRENT="$(cat /sys/devices/system/cpu/intel_pstate/no_turbo)"
+	TB_CURRENT="$(cat $NO_TURBO_FILE)"
 
 	if [ "$TB_CURRENT" = "$ACTIVE" ] ; then
 		echo "$MSG enabled."
